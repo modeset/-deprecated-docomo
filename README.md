@@ -66,14 +66,14 @@ or haml.
 
 The html output for the second example would look like:
 
-  <div class="docomo-showcase">
-    <h1>Title</h1>
-  </div>
-  <pre>
-    <code class="haml">
-      %h1 Title
-    </code>
-  </pre>
+    <div class="docomo-showcase">
+      <h1>Title</h1>
+    </div>
+    <pre>
+      <code class="haml">
+        %h1 Title
+      </code>
+    </pre>
 
 
 ## Examples
