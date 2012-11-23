@@ -53,8 +53,8 @@ describe Docomo::Helpers do
   describe "#render_pygments" do
 
     it "renders contents with pigments" do
-      result = subject.new.send(:haml_to_html, '%h1 title')
-      expect(result).to eql("<h1>title</h1>\n")
+      result = subject.new.send(:render_pygments, '%h1 title', 'haml')
+      expect(result).to eql("<div class=\"highlight\"><pre><span class=\"nt\">%h1</span> title\n</pre></div>")
     end
 
   end
