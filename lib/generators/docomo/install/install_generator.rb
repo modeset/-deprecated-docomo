@@ -9,7 +9,7 @@ module Docomo
                    :desc => 'Full installation will install the template and asset files for easier customization.'
 
       def copy_initializer
-        copy_file 'config/initializers/docomo.rb'
+        copy_file 'lib/generators/docomo/install/templates/initializer.rb', 'config/initializers/docomo.rb'
       end
 
       def copy_template_and_assets
