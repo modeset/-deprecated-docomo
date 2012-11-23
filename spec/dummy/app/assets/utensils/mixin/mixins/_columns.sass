@@ -1,0 +1,23 @@
+
+@mixin base-column
+  +box-sizing(border-box)
+  display: block
+  float: left
+
+@mixin base-column-right
+  +box-sizing(border-box)
+  display: block
+  float: right
+
+@mixin base-row
+  +box-sizing(border-box)
+  +clearfixer
+  display: block
+
+%base-column
+  +base-column
+%base-column-right
+  +base-column-right
+%base-row
+  +base-row
+

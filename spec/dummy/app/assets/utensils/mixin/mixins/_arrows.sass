@@ -1,0 +1,44 @@
+
+// Base arrow for setup
+@mixin arrow
+  display: inline-block
+  position: absolute
+  width: 0
+  height: 0
+  border-color: transparent
+  border-style: solid
+
+// Set `top` and `left` positions from the caller
+@mixin arrow-north($color:#000, $size:5px, $add_base:false)
+  @if $add_base == true
+    +arrow
+  border-width: 0 $size $size
+  border-bottom-color: $color
+  margin-left: -$size
+
+
+// Set `bottom` and `left` positions from the caller
+@mixin arrow-south($color:#000, $size:5px, $add_base:false)
+  @if $add_base == true
+    +arrow
+  border-width: $size $size 0
+  border-top-color: $color
+  margin-left: -$size
+
+// Set `top` and `right` positions from the caller
+@mixin arrow-east($color:#000, $size:5px, $add_base:false)
+  @if $add_base == true
+    +arrow
+  border-width: $size 0 $size $size
+  border-left-color: $color
+  margin-top: -$size
+
+
+// Set `top` and `left` positions from the caller
+@mixin arrow-west($color:#000, $size:5px, $add_base:false)
+  @if $add_base == true
+    +arrow
+  border-width: $size $size $size 0
+  border-right-color: $color
+  margin-top: -$size
+

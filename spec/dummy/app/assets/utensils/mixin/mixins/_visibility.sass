@@ -1,0 +1,58 @@
+
+$legacy-support-for-ie: true !default
+
+// Totally hidden from screen readers and browsers
+@mixin hidden
+  display: none !important
+  visibility: hidden
+
+// Reverse the effects of `hidden`
+@mixin shown
+  display: block
+  visibility: visible
+
+// Only visually hidden, still available to screen readers
+@mixin visuallyhidden
+  border: 0
+  clip: rect(0 0 0 0)
+  position: absolute
+  overflow: hidden
+  margin: -1px
+  padding: 0
+  width: 1px
+  height: 1px
+  &.focusable:active,
+  &.focusable:focus
+    clip: auto
+    position: static
+    overflow: visible
+    margin: 0
+    width: auto
+    height: auto
+
+// Reverse the settings applied by `.visuallyhidden`
+@mixin visuallyshown
+  clip: auto
+  clip: rect(auto auto auto auto)
+  position: static
+  overflow: visible
+  margin: 0
+  width: auto
+  height: auto
+
+// Hide visually and from screenreaders, but maintain layout
+@mixin invisible
+  visibility: hidden
+
+// Add placeholder classes
+%hidden
+  +hidden
+%shown
+  +shown
+%visuallyhidden
+  +visuallyhidden
+%visuallyshown
+  +visuallyshown
+%invisible
+  +invisible
+

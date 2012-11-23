@@ -1,0 +1,132 @@
+
+$body-family: $sans-family !default
+$body-background: $base-bgc !default
+$body-color: $base-color !default
+$select-color: white !default
+$select-bgc: $primary !default
+$tap-highlight: $link-color !default
+$nav-inline-padding-left: 0.5em !default
+$nav-inline-padding-right: $nav-inline-padding-left !default
+$nav-header-color: $body-color !default
+$nav-header-font-weight: bold !default
+$nav-divider: $base-border !default
+
+// Top level elements
+html
+  font-size: 100%
+  -webkit-text-size-adjust: 100%
+  -ms-text-size-adjust: 100%
+
+html, button, input, select, textarea
+  color: $body-color
+  font-family: $body-family
+
+body
+  +font-size($base-font-size)
+  background: $body-background
+  line-height: $base-line-height
+  margin: 0
+
+// Set vendor text selection
++text-selection($select-bgc, $select-color)
+
+// Links
+a, a:visited
+  color: $link-color
+  text-decoration: none
+
+a:focus
+  +tab-focus
+
+a:hover, a:active
+  outline: 0
+  text-decoration: none
+
+a:hover
+  color: $link-hover
+
+a:active, a.active, .active > a
+  color: $link-active
+
+a:link
+  -webkit-tap-highlight-color: $tap-highlight
+
+// Base navigation
+.nav
+  +clearfixer
+  list-style: none
+
+.nav > li
+  margin-left: 0
+
+.nav > li > a
+  display: block
+
+.nav.inline > li
+  float: left
+
+.nav.inline > li > a
+  padding-left: $nav-inline-padding-left
+  padding-right: $nav-inline-padding-right
+
+.nav.inline > li:first-child > a
+  padding-left: 0
+
+
+// Active states get a default cursor
+.active > a,
+.active > a:hover,
+.active > button,
+.active > button:hover
+  cursor: default
+
+// Checkbox groups do not
+[data-behavior="checkbox"] .active > a,
+[data-behavior="checkbox"] .active > a:hover,
+[data-behavior="checkbox"] .active > button,
+[data-behavior="checkbox"] .active > button:hover,
+[data-behavior="checkbox"] a.active,
+[data-behavior="checkbox"] a.active:hover,
+[data-behavior="checkbox"] button.active,
+[data-behavior="checkbox"] button.active:hover
+  cursor: pointer
+
+// Assets
+.nav-header
+  display: block
+  color: $nav-header-color
+  font-weight: $nav-header-font-weight
+
+.nav li + .nav-header
+  margin-top: 1em
+
+.nav-divider
+  border-top: 1px solid $nav-divider
+  display: block
+  margin: 1em 0
+  height: 1px
+
+.nav-header + .nav-divider
+  margin-top: 0
+
+
+// Tabable panes
+.tab-content > .tab-pane
+  +visuallyhidden
+.tab-content > .active
+  +visuallyshown
+
+// Utility classes... Gabe, you're welcome.
+.pull-left
+  float: left
+.pull-right
+  float: right
+.cf
+  @extend %clearfixer
+.ir
+  @extend %ir
+.hidden
+  @extend %hidden
+.shown
+  @extend %shown
+

@@ -1,0 +1,10 @@
+%h1= title
+%ul
+  - for item in aside_items
+    %li
+      %a{href: "##{item[:id]}"}= item[:title]
+
+%section.docomo-container
+  - for section in content_sections
+    %a{name: section[:id]}
+    %section.docomo-section= section[:content]

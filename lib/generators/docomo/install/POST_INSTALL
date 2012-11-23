@@ -1,0 +1,6 @@
++============================================================================+
+Congratulations! Docomo was successfully installed. Documentation and more can
+be found at: https://github.com/modeset/docomo
+
+You can configure Docomo in config/initializers/docomo.rb and make adjustments
+to the template, css, and javascript if you installed them.

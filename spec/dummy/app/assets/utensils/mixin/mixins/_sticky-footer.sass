@@ -1,0 +1,30 @@
+
+// Sticky Footer
+@mixin sticky_footer($footer-height)
+  html, body
+    height: 100%
+  .main
+    min-height: 100%
+    overflow-x: hidden
+    width: 100%
+  .content
+    padding-bottom: $footer-height
+  .footer
+    clear: both
+    position: relative
+    margin-top: $footer-height * -1
+    height: $footer-height
+    overflow: visible
+
+// Unstick the footer
+@mixin unsticky_footer()
+  html, body
+    height: auto
+  .main
+    min-height: none
+  .content
+    padding-bottom: 0
+  .footer
+    margin-top: 1em
+    height: auto
+
