@@ -34,7 +34,7 @@ describe Docomo::Parser do
 
   def assertion_criteria_for(source)
     filename = Docomo::Engine.root.join("spec/fixtures/sources/#{source}.md")
-    expected = File.read(Docomo::Engine.root.join("spec/fixtures/results/#{source}.html"))
+    expected = File.read(Docomo::Engine.root.join("spec/fixtures/results/#{source}.txt"))
     [filename, expected]
   end
 

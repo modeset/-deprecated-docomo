@@ -1,10 +1,8 @@
 <h1>Button Semigloss</h1>
 
 <p>A semi-glossy button created via various mixins. By default, no classes are added to the style sheet unless told to do so.</p>
-
 <div class="highlight"><pre><span class="k">@import</span> <span class="s">utensils/button_semigloss/button_semigloss</span>
 </pre></div>
-
 <h2>Usage Example</h2>
 
 <div class="docomo-showcase"><section class='demo' data-remove='active error disabled' data-target='.btn'>
@@ -25,7 +23,8 @@
   <a class='btn' data-add='error' href='#'>Error</a>
   <a class='btn' data-add='disabled' href='#'>Disabled</a>
 </nav>
-</div><div class="highlight"><pre><span class="nt">%section</span><span class="nc">.demo</span>(<span class="na">data-target=</span><span class="s">&quot;.btn&quot;</span> <span class="na">data-remove=</span><span class="s">&quot;active error disabled&quot;</span>)
+</div>
+<div class="highlight"><pre><span class="nt">%section</span><span class="nc">.demo</span>(<span class="na">data-target=</span><span class="s">&quot;.btn&quot;</span> <span class="na">data-remove=</span><span class="s">&quot;active error disabled&quot;</span>)
   <span class="nt">%button</span><span class="nc">.btn</span> Default
   <span class="nt">%button</span><span class="nc">.btn.inverse</span> Inverse
   <span class="nt">%button</span><span class="nc">.btn.standard</span> Standard
@@ -43,7 +42,6 @@
   <span class="nt">%a</span><span class="nc">.btn</span>(<span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">data-add=</span><span class="s">&quot;error&quot;</span>) Error
   <span class="nt">%a</span><span class="nc">.btn</span>(<span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">data-add=</span><span class="s">&quot;disabled&quot;</span>) Disabled
 </pre></div>
-
 <p>The semigloss-button class can be applied to <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code> and <code>&lt;input&gt;</code> elements.</p>
 
 <div class="docomo-showcase"><section class='semigloss-btn-demo'>
@@ -52,13 +50,13 @@
   <input class='btn' type='button' value='Input' />
   <input class='btn' type='submit' value='Submit' />
 </section>
-</div><div class="highlight"><pre><span class="nt">%section</span><span class="nc">.semigloss-btn-demo</span>
+</div>
+<div class="highlight"><pre><span class="nt">%section</span><span class="nc">.semigloss-btn-demo</span>
   <span class="nt">%a</span><span class="nc">.btn</span>(<span class="na">href=</span><span class="s">&quot;#&quot;</span>) Link
   <span class="nt">%button</span><span class="nc">.btn</span>(<span class="na">type=</span><span class="s">&quot;submit&quot;</span>) Button
   <span class="nt">%input</span><span class="nc">.btn</span>(<span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">value=</span><span class="s">&quot;Input&quot;</span>)
   <span class="nt">%input</span><span class="nc">.btn</span>(<span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="na">value=</span><span class="s">&quot;Submit&quot;</span>)
 </pre></div>
-
 <h2>Options</h2>
 
 <p>Semigloss button contains 3 mixins.</p>
@@ -110,11 +108,9 @@
 <td>The button&#39;s <code>border-radius</code></td>
 </tr>
 </tbody></table>
-
 <div class="highlight"><pre><span class="nc">.btn</span>
   <span class="nd">+semigloss-button</span><span class="p">(</span><span class="nv">$body-bgc</span><span class="o">,</span> <span class="nv">$link-color</span><span class="p">)</span>
 </pre></div>
-
 <h3>Mixin: <code>semigloss-button-modifier</code></h3>
 
 <p>Generates the modifier classes from the base class. This limits the
@@ -153,7 +149,6 @@ amount of output for a given button.</p>
 <td>The percentage to darken the <code>border-color</code> against <code>$bg</code></td>
 </tr>
 </tbody></table>
-
 <div class="highlight"><pre><span class="nc">.btn</span>
   <span class="k">&amp;</span><span class="nc">.important</span>
     <span class="nd">+semigloss-button-modifier</span><span class="p">(</span><span class="nv">$important</span><span class="o">,</span> <span class="nv">$white</span><span class="p">)</span>
@@ -162,7 +157,6 @@ amount of output for a given button.</p>
   <span class="k">&amp;</span><span class="nc">.warning</span>
     <span class="nd">+semigloss-button-modifier</span><span class="p">(</span><span class="nv">$warning</span><span class="o">,</span> <span class="nv">$white</span><span class="p">)</span>
 </pre></div>
-
 <h3>Mixin: <code>generate-semigloss-buttons</code></h3>
 
 <p>Generates the base class and modifier classes from the list directly to
@@ -186,7 +180,6 @@ the style sheet.</p>
 <td>A <code>list</code> of named status classes, passing an empty list does not generate any modifiers</td>
 </tr>
 </tbody></table>
-
 <div class="highlight"><pre><span class="nd">+generate-semigloss-buttons</span><span class="p">(</span><span class="n">btn</span><span class="o">,</span> <span class="nv">$base-level-list</span><span class="p">)</span>
 
 <span class="c1">// results in styles for..</span>
@@ -205,7 +198,6 @@ the style sheet.</p>
 <span class="nc">.btn.danger</span>
   <span class="c1">// modified styles...</span>
 </pre></div>
-
 <p>The base class (in these cases <code>.btn</code>) adds all of the necessary
 properties to render a button. The modifiers (<code>.success</code>, <code>.important</code>)
 mainly override the color values for various states. To keep the output
@@ -216,10 +208,8 @@ project or application.</p>
 
 <p>To auto generate buttons into the style sheet, within <code>config.sass</code> add
 the following:</p>
-
 <div class="highlight"><pre><span class="na">$auto-generate-semigloss</span><span class="o">:</span> <span class="n">btn</span><span class="o">,</span> <span class="nv">$base-status-list</span>
 </pre></div>
-
 <p>This will create a base button with the class of <code>.btn</code> and
 modifiers for each of the elements within the <code>$base-status-list</code>. By
 default this is set to <code>false</code> so no buttons are created.</p>

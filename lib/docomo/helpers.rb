@@ -1,5 +1,4 @@
 require 'haml'
-require 'pygments'
 
 module Docomo::Helpers
 
@@ -12,8 +11,8 @@ module Docomo::Helpers
     raise "DocomoFileNotFound"
   end
 
-  def markdown_to_html(markdown = '', config = nil)
-    @markdown ||= Redcarpet::Markdown.new(Docomo::Render.new, (config || Docomo.configuration).markdown_options)
+  def markdown_to_html(markdown = '')
+    @markdown ||= Redcarpet::Markdown.new(Docomo::Render.new({}, @config || Docomo.configuration), (@config || Docomo.configuration).markdown_options)
     @markdown.render(markdown)
   end
 
@@ -21,7 +20,4 @@ module Docomo::Helpers
     Haml::Engine.new(haml).render(binding)
   end
 
-  def render_pygments(code, format)
-    Pygments.highlight(code, lexer: format)
-  end
 end

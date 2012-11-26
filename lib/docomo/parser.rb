@@ -14,7 +14,7 @@ class Docomo::Parser
 
   def parse
     @file_handle.each { |line| parse_line(line) }
-    markdown_to_html(@content, @config)
+    markdown_to_html(@content)
   end
 
   private
@@ -70,7 +70,7 @@ class Docomo::Parser
     format = @collected_format
     format = 'coffeescript' if format == 'coffee'
     append_usage_example(@collected, format) if @usage_example
-    append(@config.use_pygments ? render_pygments(@collected, format) : "\n```#{format}\n#{@collected}```\n")
+    append("\n```#{format}\n#{@collected}```\n")
   end
 
   def append_usage_example(content, format)
