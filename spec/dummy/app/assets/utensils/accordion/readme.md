@@ -9,7 +9,7 @@ with either the `Toggle`, `ToggleGroup` or `Collapse` behaviors.
 ```
 
 ## Usage Example
-<!--~ markup/accordion.html.haml -->
+[<~Example HAML](markup/accordion.html.haml)
 
 
 ## Style Settings

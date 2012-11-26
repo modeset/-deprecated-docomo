@@ -59,8 +59,8 @@ describe Docomo::Processor do
 
     it "returns a collection of hashes with parsed content" do
       subject.any_instance.should_receive(:manifest).and_return(['test-library with_underscores/readme.md'])
-      Docomo::Parser.any_instance.should_receive(:open_file)
       Docomo::Parser.any_instance.should_receive(:parse).and_return("parsed content")
+      File.should_receive(:read)
       result = subject.new(config).send(:content_sections)
       expect(result).to eql([{id: 'test-library with_underscores', content: "parsed content"}])
     end

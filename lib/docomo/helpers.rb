@@ -11,11 +11,6 @@ module Docomo::Helpers
     raise "DocomoFileNotFound"
   end
 
-  def markdown_to_html(markdown = '')
-    @markdown ||= Redcarpet::Markdown.new(Docomo::Render.new({}, @config || Docomo.configuration), (@config || Docomo.configuration).markdown_options)
-    @markdown.render(markdown)
-  end
-
   def haml_to_html(haml)
     Haml::Engine.new(haml).render(binding)
   end

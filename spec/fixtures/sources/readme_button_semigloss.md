@@ -1,13 +1,14 @@
 
 # Button Semigloss
-A semi-glossy button created via various mixins. By default, no classes are added to the style sheet unless told to do so.
+A semi-glossy button created via various mixins. By default, no classes
+are added to the style sheet unless told to do so.
 
 ```sass
 @import utensils/button_semigloss/button_semigloss
 ```
 
 ## Usage Example
-<!--~ markup/button_semigloss.html.haml -->
+[<~Example File](markup/button_semigloss.html.haml)
 
 The semigloss-button class can be applied to `<a>`, `<button>` and `<input>` elements.
 
@@ -18,6 +19,7 @@ The semigloss-button class can be applied to `<a>`, `<button>` and `<input>` ele
   %input.btn(type="button" value="Input")
   %input.btn(type="submit" value="Submit")
 ```
+
 
 ## Options
 Semigloss button contains 3 mixins.

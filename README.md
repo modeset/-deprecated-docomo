@@ -45,14 +45,14 @@ Create .md files (file matchers are configurable), and provide live examples and
 Docomo extends markdown just a little bit and provides some nice things for rendering external files in place into your
 markdown documentation.  To include an external file into your documentation:
 
-    <!-- markup/button_semigloss.html.haml -->
+    [<Example File](markup/button_semigloss.html.haml)
 
 This file will be parsed and injected directly into your documentation (haml is rendered into html).
 
 The tilde is added for live examples.  By using `~` in various places you can get both the example rendered as html,
 and a code example that can be viewed and copied.  Here's two ways to use it.
 
-    <!--~ markup/button_semigloss.html.haml -->
+    [<~Example File](markup/button_semigloss.html.haml)
 
 In this example an external file is parsed and injected in line, and a live example of that content is rendered in
 place, followed by the exact code that was used in the example.

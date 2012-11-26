@@ -41,21 +41,6 @@ describe Docomo::Helpers do
 
   end
 
-  describe "#markdown_to_html" do
-
-    it "renders markdown to html" do
-      result = subject.new.send(:markdown_to_html, "# title")
-      expect(result).to eql("<h1>title</h1>\n")
-
-      result = subject.new.send(:markdown_to_html, "[remote](http://github.com)\nhttp://github.com")
-      expect(result).to eql("<p><a target=\"_blank\" href=\"http://github.com\" title=\"\">remote</a>\n<a target=\"_blank\" href=\"http://github.com\" title=\"\">http://github.com</a></p>\n")
-
-      result = subject.new.send(:markdown_to_html, "[local](/local)")
-      expect(result).to eql("<p><a href=\"/local\" title=\"\">local</a></p>\n")
-    end
-
-  end
-
   describe "#haml_to_html" do
 
     it "renders haml to html" do
