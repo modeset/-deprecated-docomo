@@ -33,6 +33,7 @@ class Docomo::Render < Redcarpet::Render::HTML
     if !!(language =~ %r(^~))
       usage_block(code, language.gsub('~', ''))
     else
+      language = "coffeescript" if language == "coffee"
       if @config.use_pygments
         Pygments.highlight(code, lexer: language)
       else
