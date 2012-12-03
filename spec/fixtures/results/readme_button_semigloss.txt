@@ -6,7 +6,7 @@ are added to the style sheet unless told to do so.</p>
 </pre></div>
 <h2>Usage Example</h2>
 
-<p><section class='demo' data-remove='active error disabled' data-target='.btn'>
+<p><div class="docomo-showcase"><section class='demo' data-remove='active error disabled' data-target='.btn'>
   <button class='btn'>Default</button>
   <button class='btn inverse'>Inverse</button>
   <button class='btn standard'>Standard</button>
@@ -24,7 +24,7 @@ are added to the style sheet unless told to do so.</p>
   <a class='btn' data-add='error' href='#'>Error</a>
   <a class='btn' data-add='disabled' href='#'>Disabled</a>
 </nav>
-<div class="highlight"><pre><span class="nt">%section</span><span class="nc">.demo</span>(<span class="na">data-target=</span><span class="s">&quot;.btn&quot;</span> <span class="na">data-remove=</span><span class="s">&quot;active error disabled&quot;</span>)
+</div><div class="highlight"><pre><span class="nt">%section</span><span class="nc">.demo</span>(<span class="na">data-target=</span><span class="s">&quot;.btn&quot;</span> <span class="na">data-remove=</span><span class="s">&quot;active error disabled&quot;</span>)
   <span class="nt">%button</span><span class="nc">.btn</span> Default
   <span class="nt">%button</span><span class="nc">.btn.inverse</span> Inverse
   <span class="nt">%button</span><span class="nc">.btn.standard</span> Standard
@@ -44,13 +44,13 @@ are added to the style sheet unless told to do so.</p>
 </pre></div></p>
 
 <p>The semigloss-button class can be applied to <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code> and <code>&lt;input&gt;</code> elements.</p>
-<section class='semigloss-btn-demo'>
+<div class="docomo-showcase"><section class='semigloss-btn-demo'>
   <a class='btn' href='#'>Link</a>
   <button class='btn' type='submit'>Button</button>
   <input class='btn' type='button' value='Input' />
   <input class='btn' type='submit' value='Submit' />
 </section>
-<div class="highlight"><pre><span class="nt">%section</span><span class="nc">.semigloss-btn-demo</span>
+</div><div class="highlight"><pre><span class="nt">%section</span><span class="nc">.semigloss-btn-demo</span>
   <span class="nt">%a</span><span class="nc">.btn</span>(<span class="na">href=</span><span class="s">&quot;#&quot;</span>) Link
   <span class="nt">%button</span><span class="nc">.btn</span>(<span class="na">type=</span><span class="s">&quot;submit&quot;</span>) Button
   <span class="nt">%input</span><span class="nc">.btn</span>(<span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">value=</span><span class="s">&quot;Input&quot;</span>)

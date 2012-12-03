@@ -55,6 +55,7 @@ class Docomo::Render < Redcarpet::Render::HTML
       else
         result = self.class.render(content, filename, @config)
     end
+    result = %Q(<div class="docomo-showcase">#{result}</div>)
     result + block_code(content, language).html_safe
   end
 end
