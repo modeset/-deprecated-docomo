@@ -1,1 +1,2 @@
-//= require docomo/application
+//=require docomo/application
+
