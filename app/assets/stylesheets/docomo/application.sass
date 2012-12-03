@@ -1,0 +1,102 @@
+
+%docomo_cf
+  *zoom: 1
+  &:before, &:after
+    content: " "
+    display: table
+  &:after
+    clear: both
+
+%docomo_bb
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+.docomo-hidden
+  display: none
+
+#docomo_sidebar
+  @extend %docomo_cf
+  @extend %docomo_bb
+  -webkit-overflow-scrolling: touch
+  background-color: #fefefe
+  border-right: 1px solid #ccc
+  font-family: "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+  font-size: 14px
+  font-size: 0.875rem
+  line-height: 1.2
+  overflow-x: hidden
+  overflow-y: auto
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  width: 20%
+
+#docomo_sidebar > h1
+  color: #555
+  display: block
+  font-size: 1.25em
+  padding: 1em 0.5em
+
+#docomo_sidebar > ul
+  margin-left: 0
+  list-style: none
+  list-style-image: none
+
+#docomo_sidebar li > a
+  border-left: 3px solid transparent
+  color: #777
+  display: block
+  padding: 0.3em 0.75em
+
+#docomo_sidebar li > a:hover
+  background-color: #f3f3f3
+  color: #555
+
+#docomo_sidebar > li > a:active,
+#docomo_sidebar .active > a,
+#docomo_sidebar .active > a:hover
+  background-color: #eee
+  border-left-color: #b22222
+  color: #333
+  cursor: default
+
+#docomo_sections
+  @extend %docomo_cf
+  @extend %docomo_bb
+  margin-left: 20%
+  margin-right: 10%
+
+.docomo-section
+  @extend %docomo_cf
+  padding: 0.5em 0
+  margin: 0.5em 0 0.5em 2%
+
+.docomo-section + a + .docomo-section
+  margin-top: 3em
+
+.docomo-showcase
+  @extend %docomo_cf
+  @extend %docomo_bb
+  border: 1px solid #ccc
+  border-radius: 0.4em
+  background-color: transparent
+  margin-top: 1.25em
+  margin-bottom: 1.25em
+  padding: 2em
+  position: relative
+
+.docomo-usage-toggle
+  font-size: 16px
+  font-size: 1rem
+  font-weight: bold
+  display: block
+  margin-bottom: 1em
+  cursor: pointer
+
+.docomo-section > h2
+  border-bottom: 1px solid #ccc
+  margin-top: 1em
+  margin-bottom: 0.5em
+
