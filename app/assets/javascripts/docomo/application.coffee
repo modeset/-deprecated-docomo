@@ -68,7 +68,7 @@ class docomo.Docomo
 
 
   templUsage: ->
-    '<a class="docomo-usage-toggle" href="#">View Usage</a>'
+    '<a class="docomo-usage-toggle" href="#">View Markup</a>'
 
 
   templShortcut: ->
