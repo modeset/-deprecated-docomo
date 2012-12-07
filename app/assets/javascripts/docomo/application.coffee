@@ -10,18 +10,12 @@ class docomo.Docomo
   initialize: ->
     @window = $(window)
     @aside_list = @el.find '#docomo_sidebar li'
-    @usages = @el.find('.docomo-showcase + pre').addClass 'docomo-hidden docomo-usage'
+    @usages = @el.find('.docomo-showcase + pre, .docomo-showcase + .highlight > pre').addClass 'docomo-hidden docomo-usage'
     @usage_btns = @usages.before(@templUsage()).prev '.docomo-usage-toggle'
-
-
-# PUBLIC #
 
 
   dispose: ->
     @removeListeners()
-
-
-# PROTECTED #
 
 
   addListeners: ->
