@@ -1,5 +1,6 @@
 # Docomo
 
+[![Build Status](https://travis-ci.org/modeset/docomo.png)](https://travis-ci.org/modeset/docomo)
 [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/modeset/docomo)
 
 Docomo generates static documentation for rails assets using Markdown and pygments.
