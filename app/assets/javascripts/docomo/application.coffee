@@ -3,8 +3,11 @@ window.docomo ?= {}
 
 class docomo.Docomo
   constructor: ($, @el = $('body')) ->
+    @has_storage = typeof Storage != undefined
+    @examples_only = if @has_storage and localStorage.examples_only is "true" then true else false
     @initialize()
     @addListeners()
+    @toggleStylingMode() if @examples_only
 
 
   initialize: ->
@@ -52,6 +55,8 @@ class docomo.Docomo
     not_styles = '.docomo-showcase, .docomo-usage, .docomo-usage-toggle, h1'
     @non_styles ?= @el.find('.docomo-section').children().not not_styles
     @non_styles.toggleClass 'docomo-hidden'
+    @examples_only = @non_styles.hasClass('docomo-hidden')
+    localStorage.examples_only = @examples_only if @has_storage
 
 
   toggleShortcuts: ->
