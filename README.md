@@ -135,7 +135,7 @@ The html output for the second example would look like:
 
 Licensed under the [MIT License](http://opensource.org/licenses/mit-license.php)
 
-Copyright 2012 [Mode Set](https://github.com/modeset)
+Copyright 2013 [Mode Set](https://github.com/modeset)
 
 
 ## Make Code Not War
